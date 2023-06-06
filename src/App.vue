@@ -19,8 +19,10 @@ onMounted(() => { isAdmin.value = false })
   <button @click="useUser.loginUser">Login</button>
   <button @click="useUser.logoutUser">Logout</button>
   <button @click="useUser.tooglePrivlage">Toogle Privilage</button>
-  <MessageCounter msg="Hello Component ✅" />
-  <HtmlTags/>
+  <template v-if="isLoggedIn">
+    <MessageCounter  msg="Hello Component ✅" />
+    <HtmlTags />
+  </template>
 </template>
 
 <style scoped></style>

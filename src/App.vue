@@ -1,8 +1,5 @@
 <script setup>
 import { onMounted } from 'vue';
-import MessageCounter from './components/MessageCounter.vue'
-import HtmlTags from './components/HtmlTags.vue'
-
 import { useUserStore } from './stores/user'
 import { storeToRefs } from 'pinia';
 
@@ -10,6 +7,12 @@ const useUser = useUserStore()
 const { userName, isLoggedIn, isAdmin } = storeToRefs(useUser)
 
 onMounted(() => { isAdmin.value = false })
+</script>
+
+<script>
+import MessageCounter from './components/MessageCounter.vue'
+import HtmlTags from './components/HtmlTags.vue'
+import Playground from './components/Playground.vue'
 </script>
 
 <template>
@@ -20,6 +23,7 @@ onMounted(() => { isAdmin.value = false })
   <button @click="useUser.logoutUser">Logout</button>
   <button @click="useUser.tooglePrivlage">Toogle Privilage</button>
   <template v-if="isLoggedIn">
+    <Playground />
     <MessageCounter  msg="Hello Component ✅" />
     <HtmlTags />
   </template>

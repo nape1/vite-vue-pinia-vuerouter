@@ -51,17 +51,18 @@
 h5{
     font-weight: normal;
     align-self: flex-start;
-    /* color: #8c8c8c; */
-    color: #138381;
+    color: #e1e1e1;
+    background-color: #138381;
+    padding: .1em .15em;
+    border-radius: .15em;
 }
 @media (prefers-color-scheme: dark) {
   .card {
     background-color: #212121;
   }
   h5{
-    /* color: #565656; */
-    color: #138381;
-
+    color: #e1e1e1;
+    background-color: #138381;
   }
 }
 .tag_wrapper{

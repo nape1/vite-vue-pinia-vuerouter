@@ -24,5 +24,8 @@ span{
     font-weight: bold;
     letter-spacing: .04em;
     background-color: #333333;
+    opacity: 0;
+    max-height: 0;
+    transition: all .21s linear;
 }
 </style>

@@ -53,6 +53,10 @@
     user-select: none;
     position: relative;
 }
+.card:hover > .tag_wrapper span{
+    opacity: 1;
+    max-height: 1em;
+}
 .content{
     max-height: calc(100% - 50px);
     overflow: hidden;

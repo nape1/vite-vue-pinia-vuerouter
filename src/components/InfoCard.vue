@@ -2,7 +2,7 @@
     <div class="card">
         <h5 class="text_elipsis">{{ subTitle }}</h5>
         <h2>{{ title }}</h2>
-        <div>{{ contents }}</div>
+        <div class="content">{{ contents }}</div>
         <div class="tag_wrapper">
             <InfoTags
             v-for="(tag, index) in tags"
@@ -37,23 +37,26 @@
 <style scoped>
 
 .card{
-    display: inline-flex;
-    margin:0 auto;
-    margin-block-end: .5em;
-    flex-direction: column;
+    /* display: inline-flex; */
+    /* margin:0 auto; */
+    /* margin-block-end: .5em; */
+    /* flex-direction: column; */
     letter-spacing: .020em;
     padding: .5em 1em;
     border-radius: .5em;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     /* max-width: 31%; */
     /* min-width: 250px; */
-    min-height: 5em;
+    /* min-height: 5em; */
     cursor: pointer;
     background-color: #2b2b2b;
     user-select: none;
     position: relative;
 }
-
+.content{
+    max-height: calc(100% - 50px);
+    overflow: hidden;
+}
 h5{
     font-weight: normal;
     align-self: flex-start;

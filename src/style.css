@@ -3,7 +3,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --baseFontSize:10px;
   --fontMultiplier:1;
-  --threeColGrid:repeat(3, 1fr);
+
   line-height: 1.35;
   font-weight: 400;
   color-scheme: light dark;
@@ -41,17 +41,11 @@ body {
 @media screen and (max-width: 900px) {
   :root {
     --fontMultiplier: 1.4;
-    --threeColGrid:repeat(2, 1fr); 
   }
 }
 @media screen and (min-width: 900px) {
   :root {
     --fontMultiplier: 1.6;
-  }
-}
-@media screen and (max-width: 580px) {
-  :root {
-    --threeColGrid:auto; 
   }
 }
 

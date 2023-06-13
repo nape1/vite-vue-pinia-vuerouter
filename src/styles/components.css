@@ -1,5 +1,30 @@
-.text_elipsis{
+.text_elipsis {
     white-space: pre;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+:root {
+  /* infocard grid */
+  --threeColGrid:repeat(4, 1fr);
+  --threeColGridRow:4em 10em;
+  --threeColGridRowAuto:10em;
+}
+@media screen and (max-width: 1240px) {
+    :root {
+        --threeColGrid: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --threeColGrid: repeat(2, 1fr);
+        --threeColGridRow: 4em 10em;
+        --threeColGridRowAuto: 10em;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    :root {
+        --threeColGrid: auto;
+    }
 }

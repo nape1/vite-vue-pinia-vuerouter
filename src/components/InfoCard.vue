@@ -2,30 +2,33 @@
     <div class="card">
         <h2>{{ title }}</h2>
         <h5>{{ subTitle }}</h5>
-        <Tags 
+        <div class="tag_wrapper">
+            <InfoTags
             v-for="(tag, index) in hashTags"
-            :key="tag"
-            :index="index"
-            :tags="hashTags"
-        />
+            :key="index"
+            :title="tag"
+            />
+        </div>
     </div>
 </template>
 
 <script>
-    import Tags from './Tags.vue'
+    import InfoTags from './InfoTags.vue';
+    
     export default {
-        name:'InfoCard',
-        components:[Tags],
-        props:{
-            title: String,
-            subTitle: String
-        },
-        data(){
-            return {
-                hashTags: ['js', 'react', 'frontend']
-            }
-        }
-    }
+    name: "InfoCard",
+    components: [InfoTags],
+    props: {
+        title: String,
+        subTitle: String
+    },
+    data() {
+        return {
+            hashTags: ["js", "react", "frontend"]
+        };
+    },
+    components: { InfoTags }
+}
 </script>
 
 <style scoped>
@@ -48,14 +51,20 @@
 h5{
     font-weight: normal;
     align-self: flex-start;
-    color: #8c8c8c;
+    /* color: #8c8c8c; */
+    color: #138381;
 }
 @media (prefers-color-scheme: dark) {
   .card {
     background-color: #212121;
   }
   h5{
-    color: #565656;
+    /* color: #565656; */
+    color: #138381;
+
   }
+}
+.tag_wrapper{
+    display: flex;
 }
 </style>

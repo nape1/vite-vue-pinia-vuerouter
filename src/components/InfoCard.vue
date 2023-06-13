@@ -1,10 +1,11 @@
 <template>
     <div class="card">
+        <h5 class="text_elipsis">{{ subTitle }}</h5>
         <h2>{{ title }}</h2>
-        <h5>{{ subTitle }}</h5>
+        <div>{{ contents }}</div>
         <div class="tag_wrapper">
             <InfoTags
-            v-for="(tag, index) in hashTags"
+            v-for="(tag, index) in tags"
             :key="index"
             :title="tag"
             />
@@ -20,7 +21,9 @@
     components: [InfoTags],
     props: {
         title: String,
-        subTitle: String
+        subTitle: String,
+        contents: String,
+        tags: Array,
     },
     data() {
         return {
@@ -34,18 +37,21 @@
 <style scoped>
 
 .card{
-    display: flex;
+    display: inline-flex;
+    margin:0 auto;
+    margin-block-end: .5em;
     flex-direction: column;
     letter-spacing: .020em;
     padding: .5em 1em;
-    border-radius: 1em;
+    border-radius: .5em;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    max-width: 32vw;
-    min-width: 280px;
+    /* max-width: 31%; */
+    /* min-width: 250px; */
     min-height: 5em;
     cursor: pointer;
     background-color: #2b2b2b;
     user-select: none;
+    position: relative;
 }
 
 h5{
@@ -54,7 +60,10 @@ h5{
     color: #e1e1e1;
     background-color: #138381;
     padding: .1em .15em;
-    border-radius: .15em;
+    border-radius: .25em;
+    position: absolute;
+    inset: 0 0 auto auto;
+    max-width: 100px;
 }
 @media (prefers-color-scheme: dark) {
   .card {

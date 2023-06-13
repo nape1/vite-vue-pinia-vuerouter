@@ -20,7 +20,9 @@ span{
     padding: 0 .15em;
     color: #8c8c8c;
     border-radius: .3em;
-    /* line-height: 1em; */
+    font-size: .75em;
+    font-weight: bold;
+    letter-spacing: .04em;
     background-color: #333333;
 }
 </style>

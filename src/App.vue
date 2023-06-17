@@ -1,6 +1,6 @@
 <script setup>
-import MessageCounter from './components/MessageCounter.vue'
-import HtmlTags from './components/HtmlTags.vue'
+import MessageCounter from '@/components/MessageCounter.vue'
+import HtmlTags from '@/components/HtmlTags.vue'
 </script>
 
 <template>

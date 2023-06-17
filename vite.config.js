@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue';
+import { presetAttributify, presetUno } from 'unocss';
+import UnoCss from 'unocss/vite';
 import { fileURLToPath, URL } from "url";
-import UnoCss from 'unocss/vite'
-import {presetUno} from 'unocss'
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +10,8 @@ export default defineConfig({
     vue(),
     UnoCss({
         presets:[
-            presetUno()
+            presetUno(),
+            presetAttributify()
         ]
     })
 ],
